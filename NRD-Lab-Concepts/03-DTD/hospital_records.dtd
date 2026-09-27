@@ -1,0 +1,17 @@
+<!--
+  CareConnect Hospital Appointment System
+  Experiment 3: Document Type Definition (DTD) for Hospital Structure Validation
+-->
+<!ELEMENT hospital (hospitalName, branch, doctors)>
+<!ELEMENT hospitalName (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT doctors (doctor+)>
+<!ELEMENT doctor (name, specialization, qualification, experience, fee)>
+<!ATTLIST doctor
+          id CDATA #REQUIRED
+          active (true | false) "true">
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT specialization (#PCDATA)>
+<!ELEMENT qualification (#PCDATA)>
+<!ELEMENT experience (#PCDATA)>
+<!ELEMENT fee (#PCDATA)>

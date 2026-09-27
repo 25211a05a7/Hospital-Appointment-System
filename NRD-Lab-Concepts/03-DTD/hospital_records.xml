@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hospital SYSTEM "hospital_records.dtd">
+<hospital>
+  <hospitalName>CareConnect Hospital</hospitalName>
+  <branch>Central Bangalore Campus</branch>
+  <doctors>
+    <doctor id="DOC101" active="true">
+      <name>Dr. Rajesh Sharma</name>
+      <specialization>General Medicine</specialization>
+      <qualification>MBBS, MD (Internal Medicine)</qualification>
+      <experience>14</experience>
+      <fee>600.00</fee>
+    </doctor>
+    <doctor id="DOC102" active="true">
+      <name>Dr. Priya Venkatesh</name>
+      <specialization>Cardiology</specialization>
+      <qualification>MBBS, MD, DM (Cardiology)</qualification>
+      <experience>12</experience>
+      <fee>1000.00</fee>
+    </doctor>
+  </doctors>
+</hospital>

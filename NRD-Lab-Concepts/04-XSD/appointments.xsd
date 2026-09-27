@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  CareConnect Hospital Appointment System
+  Experiment 4: XML Schema Definition (XSD)
+  Provides strong data typing, regex pattern restrictions, enumerations, and min/max occurrences.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- Simple Types with Restrictions -->
+  <xs:simpleType name="StatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending"/>
+      <xs:enumeration value="Confirmed"/>
+      <xs:enumeration value="Cancelled"/>
+      <xs:enumeration value="Completed"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TimeSlotType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(0[1-9]|1[0-2]):[0-5][0-9] (AM|PM)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Root Element -->
+  <xs:element name="hospitalAppointments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="appointment" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="patientId" type="xs:positiveInteger"/>
+              <xs:element name="patientName" type="xs:string"/>
+              <xs:element name="doctorId" type="xs:positiveInteger"/>
+              <xs:element name="doctorName" type="xs:string"/>
+              <xs:element name="appointmentDate" type="xs:date"/>
+              <xs:element name="appointmentTime" type="TimeSlotType"/>
+              <xs:element name="reason" type="xs:string"/>
+              <xs:element name="status" type="StatusType"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

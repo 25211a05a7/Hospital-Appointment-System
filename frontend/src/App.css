@@ -1,0 +1,209 @@
+/* App Layout and Hero styling */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #0f4c81 0%, #0066cc 60%, #00a896 100%);
+  color: #ffffff;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.92;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Feature Icon Card */
+.department-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  height: 100%;
+}
+
+.department-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
+  box-shadow: 0 12px 28px rgba(0, 102, 204, 0.12);
+}
+
+.department-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1.25rem auto;
+  transition: all 0.3s ease;
+}
+
+.department-card:hover .department-icon {
+  background: var(--primary-color);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Doctor Card */
+.doctor-card {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+.doctor-img-wrapper {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.doctor-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.doctor-card:hover .doctor-img-wrapper img {
+  transform: scale(1.04);
+}
+
+.doctor-badge-dept {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+}
+
+/* Step Wizard Card */
+.step-card {
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  position: relative;
+  height: 100%;
+}
+
+.step-number {
+  position: absolute;
+  top: -16px;
+  left: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+}
+
+/* Navbar */
+.navbar-custom {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 0.85rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--primary-color) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #475569 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 6px;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color) !important;
+  background-color: var(--primary-light);
+}
+
+/* Print voucher */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-area, .printable-area * {
+    visibility: visible;
+  }
+  .printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

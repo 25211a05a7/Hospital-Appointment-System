@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  CareConnect Hospital Appointment System
+  Experiment 2: XML Data Representation for Hospital Patients and Medical Records
+-->
+<hospital xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <hospitalName>CareConnect Hospital</hospitalName>
+    <branch>Central Campus</branch>
+    <generatedDate>2026-09-27</generatedDate>
+  </metadata>
+  <patients>
+    <patient id="P101">
+      <personalInfo>
+        <fullName>Rahul Sharma</fullName>
+        <dateOfBirth>1998-05-15</dateOfBirth>
+        <gender>Male</gender>
+        <bloodGroup>O+</bloodGroup>
+      </personalInfo>
+      <contactInfo>
+        <email>patient@careconnect.com</email>
+        <phone>9123456780</phone>
+        <address>42, Green Glen Layout, Bellandur, Bangalore, Karnataka</address>
+        <emergencyContact>9123456789</emergencyContact>
+      </contactInfo>
+      <medicalHistory>
+        <condition diagnosedDate="2024-03-10">Mild Hypertension</condition>
+        <allergy>Penicillin</allergy>
+      </medicalHistory>
+    </patient>
+    <patient id="P102">
+      <personalInfo>
+        <fullName>Snehal Deshmukh</fullName>
+        <dateOfBirth>2001-08-22</dateOfBirth>
+        <gender>Female</gender>
+        <bloodGroup>B+</bloodGroup>
+      </personalInfo>
+      <contactInfo>
+        <email>snehal.deshmukh@gmail.com</email>
+        <phone>9123456781</phone>
+        <address>15B, Sunrise Avenue, Indiranagar, Bangalore, Karnataka</address>
+        <emergencyContact>9123456788</emergencyContact>
+      </contactInfo>
+      <medicalHistory>
+        <condition diagnosedDate="2025-01-18">Asthma</condition>
+      </medicalHistory>
+    </patient>
+  </patients>
+</hospital>

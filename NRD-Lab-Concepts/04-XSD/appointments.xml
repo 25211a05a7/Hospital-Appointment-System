@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hospitalAppointments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:noNamespaceSchemaLocation="appointments.xsd">
+  <appointment id="1">
+    <patientId>1</patientId>
+    <patientName>Rahul Sharma</patientName>
+    <doctorId>1</doctorId>
+    <doctorName>Dr. Rajesh Sharma</doctorName>
+    <appointmentDate>2026-10-02</appointmentDate>
+    <appointmentTime>10:00 AM</appointmentTime>
+    <reason>Routine annual health checkup and blood pressure monitoring.</reason>
+    <status>Confirmed</status>
+  </appointment>
+  <appointment id="2">
+    <patientId>2</patientId>
+    <patientName>Snehal Deshmukh</patientName>
+    <doctorId>8</doctorId>
+    <doctorName>Dr. Pooja Patel</doctorName>
+    <appointmentDate>2026-10-04</appointmentDate>
+    <appointmentTime>11:00 AM</appointmentTime>
+    <reason>Routine prenatal maternal consultation.</reason>
+    <status>Confirmed</status>
+  </appointment>
+</hospitalAppointments>
